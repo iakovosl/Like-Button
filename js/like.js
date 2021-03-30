@@ -6,26 +6,21 @@ let hasbeenClicked = false;
 
 function likeClickHandler(){
 
-    if (hasbeenClicked) {
-          //console.log("Like button clicked");
     let likes = $likeCount.innerText;
     likes = Number(likes);
+    
+    if (hasbeenClicked) {
     likes--;
-    $likeCount.innerText = likes;
-    //console.log(likes, typeof likes);
-    $likeWrapper.classList.add("liked"); //dynamically adds the class "liked"
-    let hasbeenClicked = false;
+    $likeWrapper.classList.remove("liked"); //dynamically adds the class "liked"
+    hasbeenClicked = false;
     
     }else{
-          //console.log("Like button clicked");
-    let likes = $likeCount.innerText;
-    likes = Number(likes);
     likes++;
-    $likeCount.innerText = likes;
-    //console.log(likes, typeof likes);
     $likeWrapper.classList.add("liked"); //dynamically adds the class "liked"
     hasbeenClicked = true;
     }
+
+    $likeCount.innerText = likes;
     
 }
 
