@@ -8,3 +8,11 @@ h1 {
     padding:10px;
     font-weight: normal;
 }
+
+.like i{
+    cursor: pointer;
+}
+
+.liked {
+    color: #3b5998;
+}
